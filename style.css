@@ -20,12 +20,18 @@ body {
     text-align: center;
 }
 
+.grade {
+    font-size: 0.5rem;
+    position: relative;
+    z-index: 10;
+}
+
 .star {
-    font-size: 2rem;
+    font-size: 4rem;
     color: gold;
     position: relative;
     z-index: 10;
-    margin-bottom: -25px;
+    margin-bottom: -40px;
     left: 50%;
     transform: translateX(-50%);
     text-shadow: 
@@ -100,13 +106,13 @@ body {
 
 
 
-.ball.red {
+.red {
     background-color: red;
 }
-.ball.blue {
+.blue {
     background-color: blue;
 }
-.ball.green {
+.green {
     background-color: green;
 }
 
