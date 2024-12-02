@@ -13,11 +13,16 @@ body {
     margin: 0;
     background: radial-gradient(circle at 50% 55%, hsl(212,55%,53%), hsl(212,55%,43%), hsl(212,55%,23%));
     font-family: 'Arial', sans-serif;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    overflow: hidden;
 }
 
 .tree {
     position: relative;
     text-align: center;
+    transition: transform 0.5s ease, font-size 0.5s ease;
 }
 
 .grade {
@@ -30,8 +35,8 @@ body {
     font-size: 4rem;
     color: gold;
     position: absolute;
-    top: -50px;
-    left: 50.5%;
+    top: -45px;
+    left: 50%;
     transform: translateX(-50%);
     z-index: 10;
     text-shadow: 
@@ -169,7 +174,7 @@ footer {
 .snowflake {
     position: absolute;
     background: white;
-    width: 10px;
+    width: random(5px,15px);
     height: 10px;
     border-radius: 50%;
     opacity: 0.8;
@@ -196,4 +201,80 @@ footer {
     pointer-events: none;
     overflow: hidden;
     z-index: 20;
+}
+
+
+
+
+@media (max-width: 430px) {
+    .tree {
+        transform: scale(0.8);  
+        transform-origin: center; 
+    }
+
+    .star {
+        font-size: 3rem;  
+        top: -30px;     
+    }
+
+    .layer1, .layer2, .layer3 {
+        border-left: 35px solid transparent; 
+        border-right: 35px solid transparent;
+    }
+
+    .layer2 {
+        border-left: 100px solid transparent; 
+        border-right: 100px solid transparent;
+        border-bottom: 100px solid #28a745;
+    }
+
+    .layer3 {
+        border-left: 130px solid transparent; 
+        border-right: 130px solid transparent;
+        border-bottom: 130px solid #28a745;
+    }
+
+    .trunk {
+        width: 30px;     
+        height: 70px;     
+        margin-top: -10px; 
+    }
+
+    .ball {
+        height: 8px;  
+        width: 8px;
+    }
+
+    .layer1 .ball:nth-child(1) { top: 7px; left: 0px; }
+    .layer1 .ball:nth-child(2) { top: 14px; left: -20px; }
+    .layer1 .ball:nth-child(3) { top: 22px; left: 15px; }
+
+    .layer2 .ball:nth-child(1) { top: 7px; left: -8px; }
+    .layer2 .ball:nth-child(2) { top: 14px; left: 8px; }
+    .layer2 .ball:nth-child(3) { top: 22px; left: 0px; }
+    .layer2 .ball:nth-child(4) { top: 30px; left: -22px; }
+    .layer2 .ball:nth-child(5) { top: 38px; left: 18px; }
+    .layer2 .ball:nth-child(6) { top: 47px; left: -8px; }
+    .layer2 .ball:nth-child(7) { top: 55px; left: 40px; }
+    .layer2 .ball:nth-child(8) { top: 64px; left: -55px; }
+    .layer2 .ball:nth-child(9) { top: 73px; left: 0px; }
+    .layer2 .ball:nth-child(10) { top: 81px; left: -50px; }
+    .layer2 .ball:nth-child(11) { top: 89px; left: 75px; }
+    .layer2 .ball:nth-child(12) { top: 98px; left: -35px; }
+
+    .layer3 .ball:nth-child(1) { top: 7px; left: 4px; }
+    .layer3 .ball:nth-child(2) { top: 12px; left: -15px; }
+    .layer3 .ball:nth-child(3) { top: 17px; left: 12px; }
+    .layer3 .ball:nth-child(4) { top: 25px; left: 25px; }
+    .layer3 .ball:nth-child(5) { top: 33px; left: -12px; }
+    .layer3 .ball:nth-child(6) { top: 42px; left: -20px; }
+    .layer3 .ball:nth-child(7) { top: 58px; left: -30px; }
+    .layer3 .ball:nth-child(8) { top: 70px; left: 0px; }
+    .layer3 .ball:nth-child(9) { top: 80px; left: 60px; }
+    .layer3 .ball:nth-child(10) { top: 90px; left: 85px; }
+    .layer3 .ball:nth-child(11) { top: 100px; left: -50px; }
+    .layer3 .ball:nth-child(12) { top: 110px; left: 0px; }
+    .layer3 .ball:nth-child(13) { top: 120px; left: 85px; }
+    .layer3 .ball:nth-child(14) { top: 100px; left: 90px; }
+    .layer3 .ball:nth-child(15) { top: 110px; left: -100px; }
 }
