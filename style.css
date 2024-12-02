@@ -10,7 +10,7 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-color: #2d3e50;
+    background:radial-gradient(circle at 50% 55%, hsl(212,55%,53%), hsl(212,55%,43%), hsl(212,55%,23%));
     font-family: 'Arial', sans-serif;
 }
 
@@ -62,6 +62,24 @@ body {
     margin: 0 auto;
     margin-top: -20px;
     border-radius: 4px;
+}
+
+.ball {
+    height: 12px;
+    width: 12px;
+    border-radius: 80%;
+}
+
+
+
+.ball.red {
+    background-color: red;
+}
+.ball.blue {
+    background-color: blue;
+}
+.ball.green {
+    background-color: green;
 }
 
 
